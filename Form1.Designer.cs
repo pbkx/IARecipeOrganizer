@@ -1,4 +1,6 @@
-﻿namespace RecipeOrganizer
+﻿using System.Collections;
+
+namespace RecipeOrganizer
 {
     partial class Form1
     {
@@ -20,6 +22,9 @@
             base.Dispose(disposing);
         }
 
+
+
+        //private ArrayList
         #region Windows Form Designer generated code
 
         /// <summary>
