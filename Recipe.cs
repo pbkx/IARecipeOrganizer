@@ -12,5 +12,12 @@ namespace RecipeOrganizer
         int id;
         String name;
         ArrayList ingredients;
+
+        public Recipe(int id, String name, ArrayList ingredients)
+        {
+            this.id = id;
+            this.name = name;
+            this.ingredients = ingredients;
+        }
     }
 }
