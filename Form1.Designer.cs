@@ -193,6 +193,7 @@ namespace RecipeOrganizer
             this.AddRecipebtn.TabIndex = 13;
             this.AddRecipebtn.Text = "Add Recipe";
             this.AddRecipebtn.UseVisualStyleBackColor = true;
+            this.AddRecipebtn.Click += new System.EventHandler(this.AddRecipebtn_Click);
             // 
             // Form1
             // 

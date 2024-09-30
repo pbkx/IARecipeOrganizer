@@ -65,5 +65,11 @@ namespace RecipeOrganizer
                 }
             }
         }
+
+        private void AddRecipebtn_Click(object sender, EventArgs e)
+        {
+            Form2 AddRecipe = new Form2();
+            AddRecipe.Show();
+        }
     }
 }
