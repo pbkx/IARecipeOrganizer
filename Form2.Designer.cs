@@ -69,12 +69,13 @@
             // 
             // EnterIngredbtn
             // 
-            this.EnterIngredbtn.Location = new System.Drawing.Point(482, 164);
+            this.EnterIngredbtn.Location = new System.Drawing.Point(367, 213);
             this.EnterIngredbtn.Name = "EnterIngredbtn";
             this.EnterIngredbtn.Size = new System.Drawing.Size(75, 23);
             this.EnterIngredbtn.TabIndex = 4;
             this.EnterIngredbtn.Text = "Enter";
             this.EnterIngredbtn.UseVisualStyleBackColor = true;
+            this.EnterIngredbtn.Click += new System.EventHandler(this.EnterIngredbtn_Click);
             // 
             // Form2
             // 

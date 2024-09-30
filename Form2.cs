@@ -16,5 +16,10 @@ namespace RecipeOrganizer
         {
             InitializeComponent();
         }
+
+        private void EnterIngredbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
