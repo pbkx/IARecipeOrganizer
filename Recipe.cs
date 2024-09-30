@@ -19,5 +19,22 @@ namespace RecipeOrganizer
             this.name = name;
             this.ingredients = ingredients;
         }
+
+        public int getID()
+        {
+            return id;
+        }
+
+        public String getName()
+        {
+            return name;
+        }
+
+        public ArrayList getIngredients()
+        {
+            return ingredients;
+        }
+
+
     }
 }
