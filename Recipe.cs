@@ -13,9 +13,8 @@ namespace RecipeOrganizer
         String name;
         String ingredients;
 
-        public Recipe(int id, String name, String ingredients)
+        public Recipe(String name, String ingredients)
         {
-            this.id = id;
             this.name = name;
             this.ingredients = ingredients;
         }
