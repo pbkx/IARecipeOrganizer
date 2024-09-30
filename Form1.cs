@@ -19,6 +19,10 @@ namespace RecipeOrganizer
             InitializeComponent();
         }
 
+        public void AddRecipe(Recipe r)
+        {
+            recipes.Add(r);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 

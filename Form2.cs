@@ -19,6 +19,7 @@ namespace RecipeOrganizer
 
         private void EnterIngredbtn_Click(object sender, EventArgs e)
         {
+            Recipe recipe = new Recipe(Nametxt.Text, Ingredientstxt.Text);
             this.Close();
         }
     }

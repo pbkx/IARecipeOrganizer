@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace RecipeOrganizer
 {
-    internal class Recipe
+    public class Recipe
     {
         int id;
         String name;
-        ArrayList ingredients;
+        String ingredients;
 
-        public Recipe(int id, String name, ArrayList ingredients)
+        public Recipe(int id, String name, String ingredients)
         {
             this.id = id;
             this.name = name;
@@ -30,7 +30,7 @@ namespace RecipeOrganizer
             return name;
         }
 
-        public ArrayList getIngredients()
+        public String getIngredients()
         {
             return ingredients;
         }
