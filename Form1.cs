@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace RecipeOrganizer
 {
     public partial class Form1 : Form
     {
+        ArrayList recipes = new ArrayList();
         public Form1()
         {
             InitializeComponent();
@@ -54,7 +56,14 @@ namespace RecipeOrganizer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            String text = textBox1.Text;
+            foreach (Recipe item in recipes)
+            {
+                if (item.getName().Contains(text))
+                {
+                    Console.Write("this is in");
+                }
+            }
         }
     }
 }
