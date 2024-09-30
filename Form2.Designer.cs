@@ -73,7 +73,7 @@
             this.EnterIngredbtn.Name = "EnterIngredbtn";
             this.EnterIngredbtn.Size = new System.Drawing.Size(75, 23);
             this.EnterIngredbtn.TabIndex = 4;
-            this.EnterIngredbtn.Text = "button1";
+            this.EnterIngredbtn.Text = "Enter";
             this.EnterIngredbtn.UseVisualStyleBackColor = true;
             // 
             // Form2
