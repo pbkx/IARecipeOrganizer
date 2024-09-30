@@ -33,6 +33,8 @@ namespace RecipeOrganizer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -46,6 +48,8 @@ namespace RecipeOrganizer
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.AddRecipebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,6 +63,8 @@ namespace RecipeOrganizer
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = global::RecipeOrganizer.Properties.Resources.images;
             this.pictureBox1.Location = new System.Drawing.Point(180, 133);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 89);
@@ -173,11 +179,27 @@ namespace RecipeOrganizer
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = "Search recipes...";
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // AddRecipebtn
+            // 
+            this.AddRecipebtn.Location = new System.Drawing.Point(188, 82);
+            this.AddRecipebtn.Name = "AddRecipebtn";
+            this.AddRecipebtn.Size = new System.Drawing.Size(75, 23);
+            this.AddRecipebtn.TabIndex = 13;
+            this.AddRecipebtn.Text = "Add Recipe";
+            this.AddRecipebtn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 450);
+            this.Controls.Add(this.AddRecipebtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox8);
@@ -223,6 +245,8 @@ namespace RecipeOrganizer
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button AddRecipebtn;
     }
 }
 
