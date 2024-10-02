@@ -25,7 +25,22 @@ namespace RecipeOrganizer
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            PictureBox[] boxes = new PictureBox[6];
+            boxes[0] = pictureBox1;
+            boxes[1] = pictureBox2;
+            boxes[2] = pictureBox3;
+            boxes[3] = pictureBox4;
+            boxes[4] = pictureBox5;
+            boxes[5] = pictureBox6;
+            for (int i = 0; i < 6; i++)
+            {
+                if (i>=recipes.Capacity) {
+                    boxes[i].Image = Properties.Resources.Placeholder;
+                    boxes[i].Refresh();
+                    boxes[i].Visible = true;
+                    //MessageBox.Show("worked");
+                }
+            } 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,7 +50,6 @@ namespace RecipeOrganizer
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
