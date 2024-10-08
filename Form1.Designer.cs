@@ -133,6 +133,7 @@ namespace RecipeOrganizer
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recipe Organizer";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -150,6 +151,7 @@ namespace RecipeOrganizer
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Favourited";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // vScrollBar1
             // 

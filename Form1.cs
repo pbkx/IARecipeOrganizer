@@ -13,7 +13,8 @@ namespace RecipeOrganizer
 {
     public partial class Form1 : Form
     {
-        ArrayList recipes = new ArrayList();
+        public static ArrayList recipes = new ArrayList();
+        public static int clickedRecipe;
         public Form1()
         {
             InitializeComponent();
@@ -47,9 +48,19 @@ namespace RecipeOrganizer
         {
 
         }
+        public static int getClickedRecipe() 
+        { 
+            return clickedRecipe;
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            if (recipes.Count>=1 && recipes[0] != null)
+            {
+                RecipeShown recipeshown = new RecipeShown();
+                clickedRecipe = 0;
+                recipeshown.Show();
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -88,6 +99,16 @@ namespace RecipeOrganizer
         {
             Form2 AddRecipe = new Form2();
             AddRecipe.Show();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

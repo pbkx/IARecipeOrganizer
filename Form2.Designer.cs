@@ -89,6 +89,7 @@
             this.Controls.Add(this.Namelbl);
             this.Name = "Form2";
             this.Text = "Enter";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

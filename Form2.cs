@@ -24,5 +24,10 @@ namespace RecipeOrganizer
             og.AddRecipe(recipe);
             this.Close();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
