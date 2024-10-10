@@ -51,28 +51,40 @@ namespace RecipeOrganizer
                 Leftbtn.Show();
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
+    
+        //Takes the text entered in the search bar
+        private void getSearch()
         {
-
-        }
-        public static int getClickedRecipe()
-        {
-            return clickedRecipe;
-        }
-        public static int getPageNum()
-        {
-            return pageNum;
+            String text = txtSearch.Text.Trim();
+            MessageBox.Show(text);
         }
 
+        //Opens add recipe form
+        private void AddRecipebtn_Click(object sender, EventArgs e)
+        {
+            Form2 AddRecipe = new Form2();
+            AddRecipe.Show();
+        }
+
+        //Picture box clicker driver codes
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (recipes.Count>=1 + pageNum * 6 && recipes[0] != null)
+            if (recipes.Count >= 1 + pageNum * 6 && recipes[0] != null)
             {
                 RecipeShown recipeshown = new RecipeShown();
                 clickedRecipe = 0;
                 recipeshown.Show();
             }
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (recipes.Count >= 2 + pageNum * 6 && recipes[1] != null)
+            {
+                RecipeShown recipeshown = new RecipeShown();
+                clickedRecipe = 1;
+                recipeshown.Show();
+            }
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -97,50 +109,27 @@ namespace RecipeOrganizer
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 2+pageNum*6 && recipes[1] != null)
+            if (recipes.Count >= 5 + pageNum * 6 && recipes[4] != null)
             {
                 RecipeShown recipeshown = new RecipeShown();
-                clickedRecipe = 1;
+                clickedRecipe = 4;
                 recipeshown.Show();
             }
-
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            String text = textBox1.Text;
-            foreach (Recipe item in recipes)
+            if (recipes.Count >= 6 + pageNum * 6 && recipes[5] != null)
             {
-                if (item.getName().Contains(text))
-                {
-                    Console.Write("this is in");
-                }
+                RecipeShown recipeshown = new RecipeShown();
+                clickedRecipe = 5;
+                recipeshown.Show();
             }
         }
 
-        private void AddRecipebtn_Click(object sender, EventArgs e)
-        {
-            Form2 AddRecipe = new Form2();
-            AddRecipe.Show();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        //Page button drivers
         private void Rightbtn_Click(object sender, EventArgs e)
         {
             pageNum++;
@@ -152,5 +141,30 @@ namespace RecipeOrganizer
             pageNum--;
             this.Form1_Load(sender, e);
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            this.getSearch();
+        }
+
+
+
+        //Unknown
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+ 
     }
 }

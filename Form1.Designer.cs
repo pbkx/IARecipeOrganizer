@@ -47,8 +47,8 @@ namespace RecipeOrganizer
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.RichTextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.Rightbtn = new System.Windows.Forms.Button();
             this.Leftbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,6 +173,7 @@ namespace RecipeOrganizer
             this.pictureBox6.Size = new System.Drawing.Size(172, 96);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox5
             // 
@@ -182,24 +183,26 @@ namespace RecipeOrganizer
             this.pictureBox5.Size = new System.Drawing.Size(172, 96);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // richTextBox1
+            // txtSearch
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(174, 21);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(383, 23);
-            this.richTextBox1.TabIndex = 17;
-            this.richTextBox1.Text = "Search for recipes...";
+            this.txtSearch.Location = new System.Drawing.Point(174, 21);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(383, 23);
+            this.txtSearch.TabIndex = 17;
+            this.txtSearch.Text = "Search for recipes...";
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(563, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Go!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(563, 19);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(37, 23);
+            this.btnSearch.TabIndex = 14;
+            this.btnSearch.Text = "Go!";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // Rightbtn
             // 
@@ -228,8 +231,8 @@ namespace RecipeOrganizer
             this.ClientSize = new System.Drawing.Size(615, 489);
             this.Controls.Add(this.Leftbtn);
             this.Controls.Add(this.Rightbtn);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
@@ -263,8 +266,8 @@ namespace RecipeOrganizer
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button Rightbtn;
         private System.Windows.Forms.Button Leftbtn;
     }

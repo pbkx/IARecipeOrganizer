@@ -12,6 +12,10 @@ namespace RecipeOrganizer
 {
     public partial class Form2 : Form
     {
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
         public Form2()
         {
             InitializeComponent();
@@ -25,9 +29,6 @@ namespace RecipeOrganizer
             this.Close();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
