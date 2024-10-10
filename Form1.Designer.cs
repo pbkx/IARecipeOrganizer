@@ -49,6 +49,8 @@ namespace RecipeOrganizer
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Rightbtn = new System.Windows.Forms.Button();
+            this.Leftbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -129,7 +131,7 @@ namespace RecipeOrganizer
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(159, 413);
+            this.groupBox1.Size = new System.Drawing.Size(159, 430);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recipe Organizer";
@@ -147,7 +149,7 @@ namespace RecipeOrganizer
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(174, 50);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(429, 374);
+            this.groupBox2.Size = new System.Drawing.Size(429, 392);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Favourited";
@@ -194,11 +196,33 @@ namespace RecipeOrganizer
             this.button1.Text = "Go!";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // Rightbtn
+            // 
+            this.Rightbtn.Location = new System.Drawing.Point(509, 454);
+            this.Rightbtn.Name = "Rightbtn";
+            this.Rightbtn.Size = new System.Drawing.Size(75, 23);
+            this.Rightbtn.TabIndex = 18;
+            this.Rightbtn.Text = "-->";
+            this.Rightbtn.UseVisualStyleBackColor = true;
+            this.Rightbtn.Click += new System.EventHandler(this.Rightbtn_Click);
+            // 
+            // Leftbtn
+            // 
+            this.Leftbtn.Location = new System.Drawing.Point(419, 454);
+            this.Leftbtn.Name = "Leftbtn";
+            this.Leftbtn.Size = new System.Drawing.Size(75, 23);
+            this.Leftbtn.TabIndex = 19;
+            this.Leftbtn.Text = "<--";
+            this.Leftbtn.UseVisualStyleBackColor = true;
+            this.Leftbtn.Click += new System.EventHandler(this.Leftbtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 450);
+            this.ClientSize = new System.Drawing.Size(615, 489);
+            this.Controls.Add(this.Leftbtn);
+            this.Controls.Add(this.Rightbtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.groupBox2);
@@ -236,6 +260,8 @@ namespace RecipeOrganizer
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Rightbtn;
+        private System.Windows.Forms.Button Leftbtn;
     }
 }
 

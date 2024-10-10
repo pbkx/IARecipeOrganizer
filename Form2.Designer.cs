@@ -69,7 +69,7 @@
             // 
             // EnterIngredbtn
             // 
-            this.EnterIngredbtn.Location = new System.Drawing.Point(367, 213);
+            this.EnterIngredbtn.Location = new System.Drawing.Point(378, 319);
             this.EnterIngredbtn.Name = "EnterIngredbtn";
             this.EnterIngredbtn.Size = new System.Drawing.Size(75, 23);
             this.EnterIngredbtn.TabIndex = 4;
