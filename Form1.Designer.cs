@@ -64,7 +64,6 @@ namespace RecipeOrganizer
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = global::RecipeOrganizer.Properties.Resources.images;
             this.pictureBox1.Location = new System.Drawing.Point(14, 52);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 89);
