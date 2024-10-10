@@ -34,7 +34,7 @@ namespace RecipeOrganizer
             boxes[3] = pictureBox4;
             boxes[4] = pictureBox5;
             boxes[5] = pictureBox6;
-            for (int i = 6*pageNum; i < 6*pageNum+6; i++)
+            /*for (int i = 0; i < 6; i++)
             {
                 if (i>=recipes.Capacity) {
                     boxes[i].Image = Properties.Resources.Placeholder;
@@ -42,7 +42,7 @@ namespace RecipeOrganizer
                     boxes[i].Visible = true;
                     //MessageBox.Show("worked");
                 }
-            }
+            }*/
             if (pageNum <= 0)
             {
                 Leftbtn.Hide();
