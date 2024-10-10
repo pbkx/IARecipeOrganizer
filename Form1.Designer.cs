@@ -63,6 +63,7 @@ namespace RecipeOrganizer
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(14, 52);
             this.pictureBox1.Name = "pictureBox1";
@@ -73,6 +74,7 @@ namespace RecipeOrganizer
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox2.Location = new System.Drawing.Point(211, 52);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(172, 89);
@@ -82,6 +84,7 @@ namespace RecipeOrganizer
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox3.Location = new System.Drawing.Point(14, 170);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(172, 96);
@@ -91,6 +94,7 @@ namespace RecipeOrganizer
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox4.Location = new System.Drawing.Point(211, 170);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(172, 96);
@@ -163,6 +167,7 @@ namespace RecipeOrganizer
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox6.Location = new System.Drawing.Point(211, 286);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(172, 96);
@@ -171,6 +176,7 @@ namespace RecipeOrganizer
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox5.Location = new System.Drawing.Point(14, 286);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(172, 96);
