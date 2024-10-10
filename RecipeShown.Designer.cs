@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.InIngredlbl = new System.Windows.Forms.Label();
+            this.Namelbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InIngredlbl
@@ -41,11 +42,21 @@
             this.InIngredlbl.Text = "Insert Ingredients here:";
             this.InIngredlbl.Click += new System.EventHandler(this.InIngredlbl_Click);
             // 
+            // Namelbl
+            // 
+            this.Namelbl.AutoSize = true;
+            this.Namelbl.Location = new System.Drawing.Point(300, 132);
+            this.Namelbl.Name = "Namelbl";
+            this.Namelbl.Size = new System.Drawing.Size(128, 13);
+            this.Namelbl.TabIndex = 1;
+            this.Namelbl.Text = "Insert Recipe Name here:";
+            // 
             // RecipeShown
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Namelbl);
             this.Controls.Add(this.InIngredlbl);
             this.Name = "RecipeShown";
             this.Text = "RecipeShown";
@@ -58,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label InIngredlbl;
+        private System.Windows.Forms.Label Namelbl;
     }
 }

@@ -67,7 +67,7 @@ namespace RecipeOrganizer
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (recipes.Count>=1 && recipes[0] != null)
+            if (recipes.Count>=1 + pageNum * 6 && recipes[0] != null)
             {
                 RecipeShown recipeshown = new RecipeShown();
                 clickedRecipe = 0;
@@ -77,7 +77,7 @@ namespace RecipeOrganizer
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 3 && recipes[2] != null)
+            if (recipes.Count >= 3 + pageNum * 6 && recipes[2] != null)
             {
                 RecipeShown recipeshown = new RecipeShown();
                 clickedRecipe = 2;
@@ -88,7 +88,7 @@ namespace RecipeOrganizer
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 4 && recipes[3] != null)
+            if (recipes.Count >= 4 + pageNum * 6 && recipes[3] != null)
             {
                 RecipeShown recipeshown = new RecipeShown();
                 clickedRecipe = 3;
@@ -99,7 +99,7 @@ namespace RecipeOrganizer
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 2 && recipes[1] != null)
+            if (recipes.Count >= 2+pageNum*6 && recipes[1] != null)
             {
                 RecipeShown recipeshown = new RecipeShown();
                 clickedRecipe = 1;
