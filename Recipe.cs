@@ -9,7 +9,6 @@ namespace RecipeOrganizer
 {
     public class Recipe
     {
-        int id;
         String name;
         String ingredients;
 
@@ -17,11 +16,6 @@ namespace RecipeOrganizer
         {
             this.name = name;
             this.ingredients = ingredients;
-        }
-
-        public int getID()
-        {
-            return id;
         }
 
         public String getName()

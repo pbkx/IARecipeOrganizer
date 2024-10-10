@@ -56,7 +56,16 @@ namespace RecipeOrganizer
         private void getSearch()
         {
             String text = txtSearch.Text.Trim();
-            MessageBox.Show(text);
+            foreach (Recipe r in recipes)
+            {
+                if (text.Equals(r.getName()))
+                {
+                    MessageBox.Show("you fatty");
+                }
+            }
+
+
+            //MessageBox.Show(text);
         }
 
         //Opens add recipe form
