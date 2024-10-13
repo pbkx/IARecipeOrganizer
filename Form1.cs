@@ -63,8 +63,6 @@ namespace RecipeOrganizer
                     MessageBox.Show("you fatty");
                 }
             }
-
-
             //MessageBox.Show(text);
         }
 
