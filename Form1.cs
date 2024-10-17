@@ -27,22 +27,6 @@ namespace RecipeOrganizer
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            PictureBox[] boxes = new PictureBox[6];
-            boxes[0] = pictureBox1;
-            boxes[1] = pictureBox2;
-            boxes[2] = pictureBox3;
-            boxes[3] = pictureBox4;
-            boxes[4] = pictureBox5;
-            boxes[5] = pictureBox6;
-            /*for (int i = 0; i < 6; i++)
-            {
-                if (i>=recipes.Capacity) {
-                    boxes[i].Image = Properties.Resources.Placeholder;
-                    boxes[i].Refresh();
-                    boxes[i].Visible = true;
-                    //MessageBox.Show("worked");
-                }
-            }*/
             if (pageNum <= 0)
             {
                 Leftbtn.Hide();
@@ -66,6 +50,17 @@ namespace RecipeOrganizer
             //MessageBox.Show(text);
         }
 
+        public void updateBoxes()
+        {
+            List<PictureBox> boxes = new List<PictureBox>();
+            
+            for (int i = 1; i <= recipes.Count; i++)
+            {
+                pictureBox1.Visible = true;
+            }
+            //TODO: FIX THIS TO UPDATE ALL PICTUREBOXES
+        }
+
         //Opens add recipe form
         private void AddRecipebtn_Click(object sender, EventArgs e)
         {
@@ -81,6 +76,10 @@ namespace RecipeOrganizer
                 RecipeShown recipeshown = new RecipeShown();
                 clickedRecipe = 0;
                 recipeshown.Show();
+            }
+            else
+            {
+                pictureBox1.Visible = false;
             }
         }
         private void pictureBox2_Click(object sender, EventArgs e)
