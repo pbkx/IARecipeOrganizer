@@ -13,13 +13,15 @@ namespace RecipeOrganizer
 {
     public partial class Form1 : Form
     {
-        public static ArrayList recipes = new ArrayList();
-        public static int clickedRecipe;
-        public static int pageNum=0;
         public Form1()
         {
             InitializeComponent();
         }
+
+        public static ArrayList recipes = new ArrayList();
+        public static int clickedRecipe;
+        public static int pageNum=0;
+
 
         public void AddRecipe(Recipe r)
         {
@@ -35,8 +37,6 @@ namespace RecipeOrganizer
                 Leftbtn.Show();
             }
         }
-    
-        //Takes the text entered in the search bar
         private void getSearch()
         {
             String text = txtSearch.Text.Trim();
@@ -50,92 +50,64 @@ namespace RecipeOrganizer
             //MessageBox.Show(text);
         }
 
+        
         public void updateBoxes()
         {
             List<PictureBox> boxes = new List<PictureBox>();
             
             for (int i = 1; i <= recipes.Count; i++)
             {
-                pictureBox1.Visible = true;
+                pictureBox1.Visible = false;
             }
             //TODO: FIX THIS TO UPDATE ALL PICTUREBOXES
         }
 
-        //Opens add recipe form
-        private void AddRecipebtn_Click(object sender, EventArgs e)
+        private void recipeShow(int box)
         {
-            Form2 AddRecipe = new Form2();
-            AddRecipe.Show();
+            RecipeShown show = new RecipeShown();
+            clickedRecipe = box;
+            show.Show();
         }
 
         //Picture box clicker driver codes
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 1 + pageNum * 6 && recipes[0] != null)
-            {
-                RecipeShown recipeshown = new RecipeShown();
-                clickedRecipe = 0;
-                recipeshown.Show();
-            }
-            else
-            {
-                pictureBox1.Visible = false;
-            }
+            this.recipeShow(0);
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 2 + pageNum * 6 && recipes[1] != null)
-            {
-                RecipeShown recipeshown = new RecipeShown();
-                clickedRecipe = 1;
-                recipeshown.Show();
-            }
-
+            this.recipeShow(1);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 3 + pageNum * 6 && recipes[2] != null)
-            {
-                RecipeShown recipeshown = new RecipeShown();
-                clickedRecipe = 2;
-                recipeshown.Show();
-            }
+            this.recipeShow(2);
 
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 4 + pageNum * 6 && recipes[3] != null)
-            {
-                RecipeShown recipeshown = new RecipeShown();
-                clickedRecipe = 3;
-                recipeshown.Show();
-            }
+            this.recipeShow(3);
 
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 5 + pageNum * 6 && recipes[4] != null)
-            {
-                RecipeShown recipeshown = new RecipeShown();
-                clickedRecipe = 4;
-                recipeshown.Show();
-            }
+            this.recipeShow(4);
+
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            if (recipes.Count >= 6 + pageNum * 6 && recipes[5] != null)
-            {
-                RecipeShown recipeshown = new RecipeShown();
-                clickedRecipe = 5;
-                recipeshown.Show();
-            }
+            this.recipeShow(5);
         }
 
         //Page button drivers
+        private void AddRecipebtn_Click(object sender, EventArgs e)
+        {
+            Form2 AddRecipe = new Form2();
+            AddRecipe.Show();
+        }
         private void Rightbtn_Click(object sender, EventArgs e)
         {
             pageNum++;
