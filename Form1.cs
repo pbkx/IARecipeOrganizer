@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,8 +23,8 @@ namespace RecipeOrganizer
        
         public static ArrayList recipes = new ArrayList();
         public static int clickedRecipe;
-
-       public static int pageNum=0;
+        public static List<PictureBox> boxes = new List<PictureBox>();
+        public static int pageNum=0;
 
        private void Rightbtn_Click(object sender, EventArgs e)
        {
@@ -40,22 +41,31 @@ namespace RecipeOrganizer
         
 
 
-    /*
-    public void updateBoxes()
-    {
-        List<PictureBox> boxes = new List<PictureBox>();
-
-        for (int i = 1; i <= recipes.Count; i++)
+    
+        public void updateBoxes()
         {
-            pictureBox1.Visible = false;
+            foreach (PictureBox b in boxes)
+            {
+                b.Visible = false;
+                b.Enabled = false;
+            }
+
+            for (int i = 0; i < Math.Min(6, recipes.Count); i++)
+            {
+                boxes[i].Visible = true;
+                boxes[i].Enabled = true;
+            }
         }
-        //TODO: FIX THIS TO UPDATE ALL PICTUREBOXES
-    }
-    */
+    
         private void Form1_Load(object sender, EventArgs e)
         {
+            boxes.Add(this.pictureBox1);
+            boxes.Add(this.pictureBox2);
+            boxes.Add(this.pictureBox3);
+            boxes.Add(this.pictureBox4);
+            boxes.Add(this.pictureBox5);
+            boxes.Add(this.pictureBox6);
 
-            
             if (pageNum <= 0)
             {
                 Leftbtn.Hide();
@@ -67,7 +77,8 @@ namespace RecipeOrganizer
             
 
             this.CenterToScreen();
-            this.SetControls();
+            //this.SetControls();
+            this.updateBoxes();
         }
 
         private void SetControls()
@@ -101,42 +112,16 @@ namespace RecipeOrganizer
         public void AddRecipe(Recipe r)
         {
             recipes.Add(r);
-
-            bool pic_one = recipes.Count.Equals(1);
-            bool pic_two = recipes.Count.Equals(2);
-            bool pic_three = recipes.Count.Equals(3);
-            bool pic_four = recipes.Count.Equals(4);
-            bool pic_five = recipes.Count.Equals(5);
-            bool pic_six = recipes.Count.Equals(6);
-
-            if (pic_one)
-            {
-                MessageBox.Show("it worked");
-            }
-
-            this.pictureBox1.Visible = true;
-            this.pictureBox2.Visible = pic_two;
-            this.pictureBox3.Visible = pic_three;
-            this.pictureBox4.Visible = pic_four;
-            this.pictureBox5.Visible = pic_five;
-            this.pictureBox6.Visible = pic_six;
+            this.updateBoxes();
         }
 
 
 
         private void recipeShow(int box)
         {
-            try 
-            {
-
-                RecipeShown show = new RecipeShown();
-                clickedRecipe = box;
-                show.Show();
-            }
-            catch
-            {
-            
-            }   
+            RecipeShown show = new RecipeShown();
+            clickedRecipe = box;
+            show.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
