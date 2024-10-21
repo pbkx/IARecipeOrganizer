@@ -92,7 +92,7 @@ namespace RecipeOrganizer
             {
                 if (text.Equals(r.getName()))
                 {
-                    MessageBox.Show("Recipe Found! Recipe number " + recipes.IndexOf(r));
+                    MessageBox.Show("Recipe Found! Recipe number " + recipes.IndexOf(r) + 1);
                 }
             }
             //MessageBox.Show(text);
