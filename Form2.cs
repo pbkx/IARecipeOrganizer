@@ -24,8 +24,7 @@ namespace RecipeOrganizer
         private void EnterIngredbtn_Click(object sender, EventArgs e)
         {
             Recipe recipe = new Recipe(Nametxt.Text, Ingredientstxt.Text);
-            Form1 og = new Form1();
-            og.AddRecipe(recipe);
+            Form1.recipes.Add(recipe);
             this.Close();
         }
 

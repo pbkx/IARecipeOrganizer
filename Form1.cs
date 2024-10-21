@@ -55,7 +55,7 @@ namespace RecipeOrganizer
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            /*
+            
             if (pageNum <= 0)
             {
                 Leftbtn.Hide();
@@ -64,7 +64,7 @@ namespace RecipeOrganizer
             { 
                 Leftbtn.Show();
             }
-            */
+            
 
             this.CenterToScreen();
             this.SetControls();
@@ -126,9 +126,17 @@ namespace RecipeOrganizer
 
         private void recipeShow(int box)
         {
-            RecipeShown show = new RecipeShown();
-            clickedRecipe = box;
-            show.Show();   
+            try 
+            {
+
+                RecipeShown show = new RecipeShown();
+                clickedRecipe = box;
+                show.Show();
+            }
+            catch
+            {
+            
+            }   
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
