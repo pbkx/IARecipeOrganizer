@@ -12,13 +12,13 @@ namespace RecipeOrganizer
 {
     public partial class Form2 : Form
     {
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
         public Form2()
         {
             InitializeComponent();
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void EnterIngredbtn_Click(object sender, EventArgs e)
